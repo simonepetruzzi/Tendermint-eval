@@ -1,0 +1,15 @@
+\documentclass{article}
+\title{Tendermint Evaluation}
+\author{Simone Petruzzi-1811872 Domenico Tersigni-}
+\date{August 2023}
+\usepackage[margin=1.5in]{geometry} % Adjust the values as per your requirements
+\begin{document}
+   \maketitle
+   \section{Introduction}
+   Consensus has a very important role in the context of State Machine Replication (SMR). The key idea for this kind of approach is that service replicas start in the exact same initial state, then executing requests in the same order. In this sense Consensus plays a fundamental role ensuring that all replicas receive transactions in the same order.
+   \newline
+   \newline
+   Here we are considering not data center context (traditional architecture for deployment of SMR based systems), with the success of cyptocurrencies and blockchain systems we have different requirements. Indeed in this kind of context we have that nodes are not all connected to each others like in the data center context, but only to a subset of nodes of the network. Communication between nodes is achieved by gossip-base peer-to-peer protocols.
+   \subsection{Model}
+   We consider a system of processes that communicate by exchanging messages. Processes can be correct or faulty (we consider the Byzantine case in which a process can act maliciously inside the network: for example by forging messages or avoiding to replay), each of it having some amount of voting power (it can also be 0). As we said previously we don't consider processes as part of a single administrative domain, conversely we assume that each process is able to exchange messages only with a subset of processes of the entire network.
+\end{document}

@@ -11,5 +11,22 @@
    \newline
    Here we are considering not data center context (traditional architecture for deployment of SMR based systems), with the success of cyptocurrencies and blockchain systems we have different requirements. Indeed in this kind of context we have that nodes are not all connected to each others like in the data center context, but only to a subset of nodes of the network. Communication between nodes is achieved by gossip-base peer-to-peer protocols.
    \subsection{Model}
-   We consider a system of processes that communicate by exchanging messages. Processes can be correct or faulty (we consider the Byzantine case in which a process can act maliciously inside the network: for example by forging messages or avoiding to replay), each of it having some amount of voting power (it can also be 0). As we said previously we don't consider processes as part of a single administrative domain, conversely we assume that each process is able to exchange messages only with a subset of processes of the entire network. Communication between processes of the same domain happens through gossip protocol. We structure network communication through a modified version of the partially synchronized system model in which we have an upper time bound $\Delta$ such that it is the maximum time we can wait and a time instant GST (Global Stabilization Time)after that all the comunication among corrects is reliable.
+   We consider a system of processes that communicate by exchanging messages. Processes can be correct or faulty (we consider the Byzantine case in which a process can act maliciously inside the network: for example by forging messages or avoiding to replay), each of it having some amount of voting power (it can also be 0). As we said previously we don't consider processes as part of a single administrative domain, conversely we assume that each process is able to exchange messages only with a subset of processes of the entire network. Communication between processes of the same domain happens through gossip protocol. We structure network communication through a modified version of the partially synchronized system model, in which we have an upper time bound $\Delta$ such that it is the maximum time we can wait and a time instant GST (Global Stabilization Time), after that all the communication among corrects is reliable. \\
+   Termination of the algorithm is guaranteed within a bounded duration after GST. Processes are equipped with a clock and they can measure local timeouts. Spoofing is not possible due to public-key cryptography (all messages contains digital signatures).
+   \subsection{State Machine replication}
+   Key idea of this approach is to guarantee that all replicas start at the same state and then proceed in the same order processing requests:
+   \begin{itemize}
+   	\item Replica coordination: all non-faulty replicas receive and process the same sequence of requests.
+   \end{itemize}
+   there is also an additional requirement that needs to be ensured: only the requests sent by clients must be executed.\\
+   In Tendermint is the service that is replicated that takes care of accepting or rejecting transactions. When a request arrives, the Tendermint process will ask the service if the request is valid, and only valid requests can be processed.
+   \subsection{Consensus}
+   Tendermint solves the state machine replication problem by sequentially executing consensus instances to agree on each block of transaction that are executed by the service being replicated. This problem is defined in terms of an agreement, a termination and a validity property.
+   \begin{itemize}
+   	\item \textbf{Agreement}: No two correct processes decide on different values.
+	\item \textbf{Termination}: All correct processes eventually decide on a value.
+	\item \textbf{Validity}: A decided value is valid, i.e., it satisfies the predefined predicate denoted valid().
+   \end{itemize}
+   \newpage
+   \section{Tendermint consensus algorithm}
 \end{document}

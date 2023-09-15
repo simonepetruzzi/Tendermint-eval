@@ -1,0 +1,71 @@
+=============== Sep 13, 2023 (CEST) ===============
+20:49:04.992216 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+20:49:05.001434 db@open opening
+20:49:05.002900 version@stat F·[] S·0B[] Sc·[]
+20:49:05.006046 db@janitor F·2 G·0
+20:49:05.006159 db@open done T·4.649049ms
+20:50:02.284757 db@close closing
+20:50:02.284989 db@close done T·221.927µs
+=============== Sep 13, 2023 (CEST) ===============
+20:51:40.405990 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+20:51:40.406481 version@stat F·[] S·0B[] Sc·[]
+20:51:40.406534 db@open opening
+20:51:40.406651 journal@recovery F·1
+20:51:40.407461 journal@recovery recovering @1
+20:51:40.419500 memdb@flush created L0@2 N·114 S·26KiB "BH:..e15,v3":"blo..ore,v6"
+20:51:40.424493 version@stat F·[1] S·26KiB[26KiB] Sc·[0.25]
+20:51:40.437336 db@janitor F·3 G·0
+20:51:40.437409 db@open done T·30.851242ms
+20:52:28.841305 db@close closing
+20:52:28.841470 db@close done T·161.213µs
+=============== Sep 13, 2023 (CEST) ===============
+21:44:54.575790 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+21:44:54.576038 version@stat F·[1] S·26KiB[26KiB] Sc·[0.25]
+21:44:54.576067 db@open opening
+21:44:54.576142 journal@recovery F·1
+21:44:54.576352 journal@recovery recovering @3
+21:44:54.579802 memdb@flush created L0@5 N·108 S·26KiB "BH:..c21,v142":"blo..ore,v121"
+21:44:54.580285 version@stat F·[2] S·52KiB[52KiB] Sc·[0.50]
+21:44:54.591065 db@janitor F·4 G·0
+21:44:54.591087 db@open done T·15.011331ms
+21:53:47.236174 db@close closing
+21:53:47.236676 db@close done T·500.803µs
+=============== Sep 13, 2023 (CEST) ===============
+22:06:09.969930 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+22:06:09.971088 version@stat F·[2] S·52KiB[52KiB] Sc·[0.50]
+22:06:09.971148 db@open opening
+22:06:09.971308 journal@recovery F·1
+22:06:09.971802 journal@recovery recovering @6
+22:06:09.985837 memdb@flush created L0@8 N·1164 S·275KiB "BH:..1f4,v581":"blo..ore,v230"
+22:06:09.987026 version@stat F·[3] S·328KiB[328KiB] Sc·[0.75]
+22:06:09.999789 db@janitor F·5 G·0
+22:06:09.999830 db@open done T·28.663731ms
+22:06:10.078071 table@compaction L0·3 -> L1·0 S·328KiB Q·1389
+22:06:10.092946 table@build created L1@11 N·1156 S·328KiB "BH:..1f4,v581":"blo..ore,v1388"
+22:06:10.093097 version@stat F·[0 1] S·328KiB[0B 328KiB] Sc·[0.00 0.00]
+22:06:10.097762 table@compaction committed F-2 S+19B Ke·0 D·230 T·19.582906ms
+22:06:10.098181 table@remove removed @5
+22:06:10.098377 table@remove removed @2
+22:34:53.228176 db@close closing
+22:34:53.229185 db@close done T·1.007018ms
+=============== Sep 14, 2023 (CEST) ===============
+02:42:44.354324 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+02:42:44.354725 version@stat F·[0 1] S·328KiB[0B 328KiB] Sc·[0.00 0.00]
+02:42:44.354743 db@open opening
+02:42:44.354784 journal@recovery F·1
+02:42:44.354912 journal@recovery recovering @9
+02:42:44.368543 memdb@flush created L0@12 N·3774 S·896KiB "BH:..5a5,v2058":"blo..ore,v1395"
+02:42:44.368893 version@stat F·[1 1] S·1MiB[896KiB 328KiB] Sc·[0.25 0.00]
+02:42:44.381012 db@janitor F·5 G·1
+02:42:44.381059 db@janitor removing table-8
+02:42:44.381196 db@open done T·26.442409ms
+02:42:44.466323 table@compaction L0·1 -> L1·1 S·1MiB Q·5164
+02:42:44.486696 table@build created L1@15 N·4301 S·1MiB "BH:..5a5,v2058":"blo..ore,v5163"
+02:42:44.486756 version@stat F·[0 1] S·1MiB[0B 1MiB] Sc·[0.00 0.01]
+02:42:44.489221 table@compaction committed F-1 S+2KiB Ke·0 D·629 T·22.83311ms
+02:42:44.489386 table@remove removed @11
+02:43:14.265144 memdb@flush N·10997 S·3MiB
+02:43:14.282364 memdb@flush created L0@17 N·10997 S·2MiB "BH:..cf4,v11137":"blo..ore,v5170"
+02:43:14.282392 version@stat F·[1 1] S·3MiB[2MiB 1MiB] Sc·[0.25 0.01]
+02:43:14.289146 memdb@flush committed F·1 T·23.891237ms
+02:43:14.290269 journal@remove removed @13

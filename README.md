@@ -24,6 +24,7 @@ this will send transactions to the selected node(in this case the one exposing R
 
 In order to collect metrics from Tendermint, we have to expose metrics. By default, these metrics are disabled and served on port 26660. If you want Tendermint exposing them you should enable it in the config file of each node and specify a different port (in my case 26666), since on 26660 is running RPC of the node1.
 
+## Collecting metrics
 Once Tendermint metrics are exposed, we can run [Prometheus](https://github.com/prometheus/prometheus) in a Docker container by runnung the following command:
 ```bash
 docker run --network host -p 9090:9090 prom/prometheus
